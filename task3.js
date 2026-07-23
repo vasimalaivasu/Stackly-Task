@@ -269,3 +269,78 @@
 //         console.log("Exit");
 //         break
 // }
+
+
+
+// Mini Project
+console.log("=====>>Mini Project>>======");
+const employee = [{
+    name : "Vasi",
+    role : "developer",
+    salary : 33001,
+    experience : 5
+ },
+{
+    name :"naveen",
+    role :"developer",
+    salary : 35001,
+    experience : 10
+}]
+let option = 1
+switch (option){
+    case (1):
+        let uname = prompt("enter the new employee name :");
+        let designation = prompt("enter the role of the employee :");
+        let sal = Number(prompt("Enter the salary of the employee :"));
+        let exp = Number(prompt("enter the Experience of the employee :"));
+        employee.push({ name:uname, role : designation, salary : sal, experience : exp})
+        // console.log(employee);
+        break;
+
+    case (2):
+        console.log(employee);
+        break;
+
+    case (3):
+        for (let key in employee){
+            let total 
+            if(employee[key].salary >= 30000){
+            total = employee[key].salary + 10000;
+            console.log("Total Salary along with bonus = " , total);
+            }else if( employee[key].salary >= 20000){
+            total = employee[key].salary + 5000;
+            console.log("Total salary along with bonus = ", total)
+            }else {
+            total = employee[key].salary + 2000;
+            console.log("Total salary along with bonus = ", total)
+            }
+        }
+        break;
+
+    case (4):
+        for(let i=0 ; i<employee.length ; i++){
+            let attendance = prompt(`Enter the status of the attendance : ${employee[i].name    }`)
+            if(attendance === "present"){
+            console.log("Employee present");
+            }else if(attendance === "absent"){
+            console.log("Employee absent");
+            }
+            else if(attendance === "halfday"){
+                console.log("Employee is on half day leave");
+            }
+            else {
+                console.log("unknow Employee");
+            }
+        }
+        break;
+        
+    case (5):
+        for(let emp of employee){
+            console.log(emp.salary);
+        }   
+        break ; 
+
+    default:
+        console.log("exit");
+        break;
+}
