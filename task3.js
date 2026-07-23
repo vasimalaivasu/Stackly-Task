@@ -340,7 +340,11 @@ switch (option){
         }   
         break ; 
 
-    default:
+      case (6):
         console.log("exit");
         break;
+
+      default:
+            console.log("Invalid Choice");
+            break;
 }
